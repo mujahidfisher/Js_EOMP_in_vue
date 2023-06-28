@@ -1,7 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&family=Roboto+Mono&display=swap");
+
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+  font-family: "Roboto Mono";
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.logo-img {
+  border: orange 4px solid;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.navbar-toggler:hover {
+  color: orangered;
+  background-color: orange;
+}
+
+.main-logo {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: orange 5px solid;
+  margin-bottom: 20px;
+}
+
+.pic1 {
+  margin-top: 8rem;
+}
+
+.join {
+  margin-top: 10px;
+  width: 7rem;
+  height: 3rem;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  border: orange 4px solid;
+}
+
+.join:hover {
+  background-color: orange;
+  color: white;
+}
+
+.blink {
+  color: white;
+  background-color: orange;
+  border: white;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  animation: blinker 0.8s linear infinite;
+  color: white;
+}
+.blink2 {
+    color: white;
+    background-color: orange;
+    border: white;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    margin-top: 1rem;
+    animation: blinker 0.8s linear infinite;
+    color: white;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.title-1 {
+    margin: 30px;
+}
+
+.checkout-btn {
+    width: 7rem;
+    height: 3rem;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    border: orange 4px solid;
+    margin-left: 80%;
+  }
+  
+  .checkout-btn:hover {
+    background-color: orange;
+    color: white;
+  }
+
+  .profile {
+    width: 18rem;
+    height: 18rem;
+    border: 5px orange solid;
+    border-radius: 50%;
+    margin-top: 30px;
+    
+}
+
+.contact-btn {
+    margin: 20px;
+}
+
+::placeholder {
+    color: rgb(0, 0, 0);
+}
+input, textarea {
+    caret-color: orange;
+}
+
+.offcanvas-body {
+    margin-top: 20px;
+}
+
+.clear-btn {
+    width: 7rem;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    border: orange 3px solid;
+    margin: 20px;
+  }
+  
+  .clear-btn:hover {
+    background-color: red;
+    color: white;
+  }
+
+  .check-head {
+    margin-top: 20px;
+    border: 3px black solid;
+    background-color: orange;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px;
+    padding: 5px;
+    margin-right: 5px;
+  }
+
+  .checkhead {
+    padding: 10px;
+    text-decoration: underline orange;
+    text-align: center;
+  }
+
+  .check-head {
+    margin-top: 20px;
+    border: 3px black solid;
+    background-color: orange;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px;
+    padding: 5px;
+    margin-right: 5px;
+  }
+
+  .checkout-box {
+    background-color: lightgrey;
+    padding: 5px;
+    height: 20rem;
+    width: fit-content;
+    margin-top: 20px;
+  }
+
+  .container-check {
+    display: grid;
+    justify-content: end;
+}
+
+.buy-items {
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+  }
+
+  .buy-items:hover {
+    background-color: orange;
+  }
+
+.dis-items {
+  padding: 5px;
+  margin: 5px;
 }
