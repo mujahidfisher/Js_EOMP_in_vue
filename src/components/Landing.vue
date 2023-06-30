@@ -6,7 +6,7 @@
             </div>
             <div class="text">
                 <h2 class="gamingtext">Are you <b>READY TO GAME!</b> <br>Grab your controller!</h2>
-                    <router-link href="/about"><button class="join">JOIN IN!</button></router-link>
+                    <router-link href="/src/views/AboutView.vue"><button class="join">JOIN IN!</button></router-link>
             <div>
         </div>
         <a href="#sect2

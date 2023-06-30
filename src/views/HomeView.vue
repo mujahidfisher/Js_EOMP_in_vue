@@ -8,7 +8,7 @@
         </div>
 
         <router-link
-        href="/checkout"><button class="checkout-btn">Checkout</button>
+        href="/src/views/CheckoutView.vue"><button class="checkout-btn">Checkout</button>
         </router-link>
         <ProductsCard />
     </div>
