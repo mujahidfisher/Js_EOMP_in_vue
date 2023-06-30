@@ -7,7 +7,7 @@
             <h1>Products</h1>
         </div>
 
-        <router-link >
+        <router-link
         href="/checkout"><button class="checkout-btn">Checkout</button>
         </router-link>
         <ProductsCard />
