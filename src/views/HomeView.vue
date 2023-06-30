@@ -7,9 +7,9 @@
             <h1>Products</h1>
         </div>
 
-        <router-link
-        href="/src/views/CheckoutView.vue"><button class="checkout-btn">Checkout</button>
-        </router-link>
+        <a
+        href="/checkout"><button class="checkout-btn">Checkout</button>
+        </a>
         <ProductsCard />
     </div>
     </div>
