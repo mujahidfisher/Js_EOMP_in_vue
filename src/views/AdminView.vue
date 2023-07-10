@@ -26,7 +26,7 @@
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
                   Close
                 </button>
-                <button type="button" class="btn btn-outline-warning" id="added" data-bs-dismiss="modal" onclick="addItem()">
+                <button type="button" class="btn btn-outline-warning" id="added" data-bs-dismiss="modal">
                   Add
                 </button>
               </div>
@@ -56,8 +56,15 @@
               <th scope="col">Edit/Delete:</th>
             </tr>
           </thead>
-          <tbody id="display-items">
-  
+          <tbody v-for="product in products" id="display-items" :key="product.id">
+            <tr>
+              <td>{{product.id}}</td>
+              <td>{{product.product}}</td>
+              <td>{{product.specs}}</td>
+              <td><img :src="product.img" alt="product" class="prodpic" loading="lazy"></td>
+              <td class="pricing">R {{product.price}}</td>
+              <td><button class="deleter">Delete</button><button class="buy-items">Edit</button></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -65,9 +72,16 @@
 
 <script>
     export default {
-        
+          computed: {
+            products() {
+                return this.$store.state.products
+            }
+        },
+        mounted() {
+            this.$store.dispatch('fetchProducts')
+        }
     }
-</script>
+  </script>
 
 <style scoped>
 

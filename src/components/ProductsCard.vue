@@ -8,7 +8,7 @@
             <li class="list-group-item">{{ product.specs }}</li>
             <li class="list-group-item">{{ product.price }}</li>
           </ul>
-          <button class= "buy" >buy</button>
+          <router-link :to="{ name: 'single', params:{id: product.id}, query:{name: product.product, specs: product.specs, price: product.price, img: product.img}}"><button class="buy">View</button></router-link>
         </div>
     </div>
 </div>
@@ -23,10 +23,20 @@
         },
         mounted() {
             this.$store.dispatch('fetchProducts')
+        },
+        methods: {
+            singleproduct() {
+                this.$router.push({
+                    name: this.name,
+                    params: this.params.id,
+                    query: this.query.name,
+                })
+            }
         }
 
-        
+
     }
+    
 </script>
 
 <style scoped>
