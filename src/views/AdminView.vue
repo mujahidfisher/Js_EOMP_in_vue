@@ -56,14 +56,14 @@
               <th scope="col">Edit/Delete:</th>
             </tr>
           </thead>
-          <tbody v-for="product in products" id="display-items" :key="product.id">
+          <tbody v-for="product in products " id="display-items" :key="product.id">
             <tr>
               <td>{{product.id}}</td>
               <td>{{product.product}}</td>
               <td>{{product.specs}}</td>
               <td><img :src="product.img" alt="product" class="prodpic" loading="lazy"></td>
               <td class="pricing">R {{product.price}}</td>
-              <td><button class="deleter">Delete</button><button class="buy-items">Edit</button></td>
+              <td><button @click="destroy(product.id)" class="deleter">Delete</button><button class="buy-items">Edit</button></td>
             </tr>
           </tbody>
         </table>
@@ -72,16 +72,28 @@
 
 <script>
     export default {
-          computed: {
-            products() {
-                return this.$store.state.products
-            }
-        },
-        mounted() {
-            this.$store.dispatch('fetchProducts')
+      computed: {
+        products() {
+          return this.$store.state.products
         }
-    }
-  </script>
+      },
+      mounted() {
+            this.$store.dispatch('fetchProducts')
+          },
+
+          // methods: {
+          //   destroy (id) {
+          //     this.product.delete(id)
+          //     console.log(id);
+          //   }
+          // },
+          
+          // created() {
+          //     fetch('https://mujahidfisher.github.io/Json-server1/code.json', { method: 'DELETE' })
+          //     .then(() => this.status = 'deleted')
+          //   }
+          }
+          </script>
 
 <style scoped>
 
